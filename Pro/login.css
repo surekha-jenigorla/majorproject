@@ -1,0 +1,191 @@
+/* Resetting some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1717e1; /* Black background */
+  color: #fff; /* White text */
+}
+
+/* Header styling */
+header {
+  background-color: #f2f5f2;
+  text-align: center;
+  margin-bottom: 0;
+  padding-top: 1px; /* Reduce top padding */
+
+}
+
+/* Header logo and title */
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 3px 20px;
+}
+
+.header-logo .logo {
+  width: 60px;
+  margin: 10px;
+}
+
+.header-logo h1 {
+  color: #0078d7;
+  margin: 0;
+  font-size: 2em;
+}
+
+.header-logo p {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #000;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Navbar links */
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+/* Navbar link hover effect */
+.navbar a:hover {
+  background-color: #0078d7;
+  color: #fff;
+}
+
+/* Navbar button styling */
+.navbar .btn {
+  color: #fff;
+  background-color: #0078d7;
+  border: none;
+  padding: 8px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/* Navbar button hover effect */
+.navbar .btn:hover {
+  background-color: #005cbf;
+}
+
+/* Banner image */
+.banner img {
+  width: 100%;
+  height: auto;
+}
+
+/* Login form wrapper */
+.wrapper {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form title */
+.wrapper h1 {
+  text-align: center;
+  color: #0078d7;
+  margin-bottom: 20px;
+}
+
+/* Input box styling */
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  padding-left: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input-box i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #0078d7;
+}
+
+/* Remember me and forgot password */
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #5e5a5a;
+}
+
+.remember-forgot a {
+  color: #0078d7;
+  text-decoration: none;
+  
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+/* Login button */
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #0078d7;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #005cbf;
+}
+
+/* Register link at the bottom */
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #5e5a5a;
+}
+
+.register-link a {
+  color: #0078d7;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}

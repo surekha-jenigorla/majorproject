@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        /* Resetting some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #f2f5f2;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        .header-logo .logo {
+            width: 60px;
+            margin: 10px;
+        }
+
+        .header-logo h1 {
+            color: #0078d7;
+            margin: 0;
+        }
+
+        .header-logo p {
+            font-size: 16px;
+            margin: 0;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #000;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #0078d7;
+            color: #fff;
+        }
+
+        /* Form container styles */
+        .container {
+            background: #ffffff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .container h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .rating {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+        }
+
+        .rating label {
+            cursor: pointer;
+            padding: 3px 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            text-align: center;
+            width: 20px;
+            background: #f4f4f4;
+            transition: background 0.3s ease;
+            font-size: 12px;
+        }
+
+        .rating input {
+            display: none;
+        }
+
+        .rating input:checked + label {
+            background: #007bff;
+            color: #fff;
+        }
+
+        button {
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="Vvitlogo.png" alt="Gov Logo" class="logo">
+            <img src="images/i2.png" alt="Har Ghar Jal" class="logo">
+            <h1>Hydro Portal</h1>
+            <p>Water Management for a Sustainable World</p>
+            <img src="images/i4.png" alt="Digital India" class="logo">
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="reports.html">Reports</a>
+            <a href="Dashboard.html">Dashboard</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Drop Us A Feedback</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Enter Email Address" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" placeholder="Your Phone Number" required>
+                <select required>
+                    <option value="" disabled selected>Did You Satisfy with Our Services?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Rate Us Out of 10:</label>
+                <div class="rating">
+                    <input type="radio" name="rating" id="rating-1" value="1"><label for="rating-1">1</label>
+                    <input type="radio" name="rating" id="rating-2" value="2"><label for="rating-2">2</label>
+                    <input type="radio" name="rating" id="rating-3" value="3"><label for="rating-3">3</label>
+                    <input type="radio" name="rating" id="rating-4" value="4"><label for="rating-4">4</label>
+                    <input type="radio" name="rating" id="rating-5" value="5"><label for="rating-5">5</label>
+                    <input type="radio" name="rating" id="rating-6" value="6"><label for="rating-6">6</label>
+                    <input type="radio" name="rating" id="rating-7" value="7"><label for="rating-7">7</label>
+                    <input type="radio" name="rating" id="rating-8" value="8"><label for="rating-8">8</label>
+                    <input type="radio" name="rating" id="rating-9" value="9"><label for="rating-9">9</label>
+                    <input type="radio" name="rating" id="rating-10" value="10"><label for="rating-10">10</label>
+                </div>
+            </div>
+            <textarea placeholder="Your Message or Suggestion" rows="5" required></textarea>
+            <button type="submit">Send Feedback</button>
+        </form>
+    </div>
+</body>
+</html>

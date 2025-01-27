@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports Page</title>
+    <style>
+        /* Resetting some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Ensure no margin on the body */
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #f2f5f2;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        .header-logo .logo {
+            width: 60px;
+            margin: 10px;
+        }
+
+        .header-logo h1 {
+            color: #0078d7;
+            margin: 0;
+        }
+
+        .header-logo p {
+            font-size: 16px;
+            margin: 0;
+            color: #333;
+        }
+
+
+        .navbar {
+  background-color: #000;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  background-color: #0078d7;
+  color: #fff;
+}
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0.8;
+        }
+
+        .box span {
+            z-index: 2;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        #report {
+            display: none;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        #report img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #backButton {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #backButton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function showReport(reportType) {
+            const containers = document.querySelector('.container');
+            const reportContainer = document.getElementById('report');
+            const backButton = document.getElementById('backButton');
+
+            let reportImage = '';
+            if (reportType === 'futureWater') {
+                reportImage = "images/waterr.jpg"; // Replace with the actual image path
+            } else if (reportType === 'storageCapacities') {
+                reportImage = 'images/reservoir4.jpg'; // Replace with the actual image path
+            }
+
+            containers.style.display = 'none';
+            reportContainer.innerHTML = `<img src="${reportImage}" alt="Report">`;
+            reportContainer.style.display = 'block';
+            backButton.style.display = 'block';
+        }
+
+        function goBack() {
+            const containers = document.querySelector('.container');
+            const reportContainer = document.getElementById('report');
+            const backButton = document.getElementById('backButton');
+
+            containers.style.display = 'flex';
+            reportContainer.style.display = 'none';
+            backButton.style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="Vvitlogo.png" alt="Gov Logo" class="logo">
+            <img src="images/i2.png" alt="Har Ghar Jal" class="logo">
+            <h1>Hydro Portal</h1>
+            <p>Water Management for a Sustainable World</p>
+            <img src="images/i4.png" alt="Digital India" class="logo">
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="reports.html">Reports</a>
+            <a href="Dashboard.html">Dashboard</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="box" onclick="showReport('futureWater')">
+                <img src="images/water.jpg" alt="Forecasting Future Water Requirements"> <!-- Replace with actual image path -->
+                <span>Forecasting Future Water Requirements</span>
+            </div>
+            <div class="box" onclick="showReport('storageCapacities')">
+                <img src="images/re1.jpg" alt="Storage Capacities in Reservoirs"> <!-- Replace with actual image path -->
+                <span>Storage Capacities in Reservoirs</span>
+            </div>
+        </div>
+        <div id="report"></div>
+        <button id="backButton" onclick="goBack()">Back</button>
+    </main>
+</body>
+</html>

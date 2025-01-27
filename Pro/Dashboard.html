@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hydro Portal</title>
+  <link rel="stylesheet" href="Dashboard.css">
+</head>
+<body>
+  <header>
+    <div class="header-logo">
+      <img src="Vvitlogo.png" alt="Gov Logo" class="logo">
+      <img src="images/i2.png" alt="Har Ghar Jal" class="logo">
+      <h1>Hydro Portal</h1>
+      <p>Water Management for a Sustainable World</p>
+      <img src="images/i4.png" alt="Digital India" class="logo">
+    </div>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="reports.html">Reports</a>
+      <a href="Dashboard.html">Dashboard</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul>
+        <li><a href="#">Prediction</a></li>
+      </ul>
+    </aside>
+
+    <!-- Content -->
+    <section class="content">
+      <!-- Combined Prediction Section -->
+      <div class="card">
+        <h2>Combined Prediction (Rainfall & Population)</h2>
+        <form>
+          <div class="form-group">
+            <input type="text" id="year" placeholder="year">
+          </div>
+          <div class="form-group">
+            <select id="month">
+              <option value="" disabled selected>Select month</option>
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select id="state">
+              <option value="" disabled selected>Select state</option>
+              <!-- Add state options -->
+            </select>
+          </div>
+          <div class="form-group">
+            <select id="district">
+              <option value="" disabled selected>Select district</option>
+              <!-- Add district options -->
+            </select>
+          </div>
+          <div class="buttons">
+            <button type="button" class="btn predict">Predict</button>
+            <button type="reset" class="btn clear">Clear</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Water Availability Prediction Section -->
+      <div class="card">
+        <h2>Water Availability Prediction</h2>
+        <form>
+    
+          <div class="form-group">
+            <select id="state-water">
+              <option value="" disabled selected>Select State</option>
+              <!-- Add month options -->
+            </select>
+          </div>
+          <div class="form-group">
+            <select id="district-water">
+              <option value="" disabled selected>Select district</option>
+              <!-- Add district options -->
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" id="year-water" placeholder="year">
+          </div>
+          <div class="form-group">
+            <select id="month-water">
+              <option value="" disabled selected>Select month</option>
+              <!-- Add month options -->
+            </select>
+          </div>
+
+        </form>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
